@@ -19,15 +19,15 @@ public class Point implements Comparable<Point> {
 
     // compare points by slope
     public final Comparator<Point> SLOPE_ORDER = new Comparator<Point>(){
-    	
+
 		public int compare(Point p0, Point p1) {
 		// TODO Auto-generated method stub
 
-			
+
 			double s0 = slopeTo(p0);
 			double s1 = slopeTo(p1);
-			 
-			if(s0 < s1) 
+
+			if(s0 < s1)
 			{
 				return -1;
 			}
@@ -39,7 +39,7 @@ public class Point implements Comparable<Point> {
 			{
 				return 0;
 			}
-			
+
 		}
     };
     // create the point (x, y)
@@ -63,10 +63,10 @@ public class Point implements Comparable<Point> {
     // slope between this point and that point
     public double slopeTo(Point that) {
         // TODO: Implement this
-    	
+
     	double dy = that.y - this.y;
     	double dx = that.x - this.x;
-    	
+
     	if((this.y == that.y) && (this.x == that.x))
     	{
     		return Double.NEGATIVE_INFINITY;
@@ -78,8 +78,8 @@ public class Point implements Comparable<Point> {
     	else if(dy == 0)
     	{
     		return 0;
-    	} 
-    	else 
+    	}
+    	else
     	{
     		return dy/dx;
     	}
@@ -99,7 +99,7 @@ public class Point implements Comparable<Point> {
     	{
     		return 0;
     	}
-    	
+
     	return 1;
     }
     // return string representation of this point
